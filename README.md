@@ -4,4 +4,4 @@
 ## javaScript
 
 - 点击波纹效果 [ripple](./JavaScript/ripple/)
-- 手风琴效果 [collpase](.JavaScript/collpase/)
+- 手风琴效果 [collpase](./JavaScript/collpase/)
