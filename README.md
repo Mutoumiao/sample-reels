@@ -3,4 +3,4 @@
 
 ## javaScript
 
-- 点击波纹效果 [ripple](./ripple/)
+- 点击波纹效果 [ripple](./JavaScript/ripple/)
