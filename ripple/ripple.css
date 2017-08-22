@@ -1,0 +1,30 @@
+.ripple {
+    border-radius: 50%;
+    background: rgba(194, 16, 16, 0.5);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+}
+.rippleEffect {
+    -webkit-animation: rippleEffect 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: rippleEffect 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes rippleEffect {
+    100% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes rippleEffect {
+    100% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        opacity: 0;
+    }
+}
