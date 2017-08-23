@@ -1,0 +1,54 @@
+.accordion-list-vertical  *,
+.accordion-list-across  *{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+/* 垂直样式 */
+.accordion-list-vertical {
+	float: left;
+}
+.accordion-list-vertical > .accordion-item {
+	width: 200px;
+	overflow: hidden;
+}
+.accordion-list-vertical .accordion-item > .accordion-item-toggle {
+	height: 40px;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	background: #DC9FD5;
+}
+.accordion-list-vertical > .accordion-item > .accordion-item-body {
+	height: 0;
+	-webkit-transition:.4s ease-in;
+	-moz-transition: .4s ease-in;
+	transition: .4s ease-in;
+}
+/* 水平样式 */
+.accordion-list-across {
+	float: left;
+}
+.accordion-list-across .accordion-item {
+	float: left;
+	overflow: hidden;
+}
+.accordion-list-across .accordion-item > div {
+	float: left;
+	height: 200px;
+}            
+.accordion-list-across .accordion-item > .accordion-item-toggle {
+	width: 40px;
+	border: 1px solid #ccc;
+	border-right: none;
+	cursor: pointer;
+	background: #DC9FD5;
+}
+.accordion-list-across > .accordion-item > .accordion-item-body {
+	width: 0px;
+	-webkit-transition:.4s ease-in;
+	-moz-transition: .4s ease-in;
+	transition: .4s ease-in;
+}
