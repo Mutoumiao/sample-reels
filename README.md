@@ -11,9 +11,10 @@
      } ``
 ## javaScript
 
-### 点击波纹效果 [ripple](./JavaScript/ripple/)
+### 点击波纹效果 | 文件地址:[ripple](./JavaScript/ripple/)
 - 开发方式 : 简单实现
+- [演示DOME](https://mutoumiao.github.io/sample-reels/JavaScript/ripple/ripple.html)
 
-### 手风琴效果 [collpase](./JavaScript/collpase/)
-- 开发方式 : 组件化开发
-[演示DOME](https://mutoumiao.github.io/sample-reels/JavaScript/ripple/ripple.html)
+### 手风琴效果 | 文件地址:[collpase](./JavaScript/collpase/)
+- 开发方式 : 组件化开发 
+- [演示DOME](https://mutoumiao.github.io/sample-reels/JavaScript/collpase/collpase.html)
