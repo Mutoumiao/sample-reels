@@ -31,29 +31,27 @@
 
 	</div>
 	<script>
-		function $(id){
+		function $(id) {
 			return document.getElementById(id);
 		}
-		
+		function Mouseenter (e) {
+			var user = e.target;
+			var data = user.dataset;
+			$('accountName').innerText = data.accountName;
+			$('name').innerText = data.name;
+			$('email').innerText = data.email;
+			$('mobile').innerText = data.mobile;
+			
+			$('card').style.display = 'block';
+		}
+		function Mouseleave (e) {
+			$('card').style.display = 'none';
+		} 
+
 		var lis = document.getElementsByTagName('li');
-		for(var i = 0, li;li = lis[i]; i++){
-			li.onmouseenter = function(event){
-				event = event || window.event;
-				var user = event.target|| event.srcElement;
-				var data = user.dataset;
-
-				$('accountName').innerText = data.accountName;
-				$('name').innerText = data.name;
-				$('email').innerText = data.email;
-				$('mobile').innerText = data.mobile;
-
-				$('card').style.display = 'block';
-			};
-
-			li.onmouseleave = function(event){
-				$('card').style.display = 'none';
-			};
-
+		for(let i = 0,len = lis.length; i < len; i++) {
+			lis[i].addEventListener('mouseenter',Mouseenter);
+			lis[i].addEventListener('mouseleave',Mouseleave);
 		}
 		
 	</script>
