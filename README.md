@@ -19,6 +19,10 @@
 - 开发方式 : 组件化开发 
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/collpase/collpase.html)
 
+### 仿天谕轮播图 | 文件地址:[TY-slides](./JavaScript/TY-slides/)
+- 开发方式: 原生实现
+- [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/TY-slides/index.html)
+
 ## 小Demo(主要针对某种功能使用练习)
 
 ### data-属性使用 | 文件地址:[data](./min-demo/data.html)
