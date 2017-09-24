@@ -31,6 +31,7 @@
 
 	</div>
 	<script>
+	(function () {
 		function $(id) {
 			return document.getElementById(id);
 		}
@@ -41,7 +42,7 @@
 			$('name').innerText = data.name;
 			$('email').innerText = data.email;
 			$('mobile').innerText = data.mobile;
-			
+
 			$('card').style.display = 'block';
 		}
 		function Mouseleave (e) {
@@ -53,6 +54,7 @@
 			lis[i].addEventListener('mouseenter',Mouseenter);
 			lis[i].addEventListener('mouseleave',Mouseleave);
 		}
+	})();
 		
 	</script>
 </body>
