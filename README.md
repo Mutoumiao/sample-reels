@@ -18,3 +18,9 @@
 ### 手风琴效果 | 文件地址:[collpase](./JavaScript/collpase/)
 - 开发方式 : 组件化开发 
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/collpase/collpase.html)
+
+## 小Demo(主要针对某种功能使用练习)
+
+### data-属性使用 | 文件地址:[data](./min-demo/data.html)
+- 开发方式 : 简单实现
+- [演示Demo](https://mutoumiao.github.io/sample-reels/min-demo/data.html)
