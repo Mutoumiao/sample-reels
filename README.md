@@ -24,7 +24,7 @@
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/TY-slides/index.html)
 
 ### 图片上传预览 | 文件地址:[image-preview](./JavaScript/image-preview/)
-- 开发方式: 简单思路实现
+- 开发方式: 简单实现\HTML API学习
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/image-preview/image.html)
 
 ## 小Demo(主要针对某种功能使用练习)
