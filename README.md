@@ -23,6 +23,10 @@
 - 开发方式: 原生实现
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/TY-slides/index.html)
 
+### 图片上传预览 | 文件地址:[image-preview](./JavaScript/image-preview/)
+- 开发方式: 简单思路实现
+- [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/image-preview/image.html)
+
 ## 小Demo(主要针对某种功能使用练习)
 
 ### data-属性使用 | 文件地址:[data](./min-demo/data.html)
