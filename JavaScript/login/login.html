@@ -8,25 +8,25 @@
     <title>登录框</title>
 </head>
 <body>
-    <form action="./login" class="m-form" name="loginForm" target="result" autocomplete="off">
-        <legend>手机号码登录</legend>
-        <fieldset>
-            <div class="msg" id="message">密码长度必须大于6位</div>
-            <div>
-                <label for="telephone">手机号：</label>
-                <input id="telephone" name="telephone" type="tel" class="u-txt" maxlength="11" 
-                required pattern="^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$"><br/>
-                <span class="tip">11位数字手机号码</span>
-            </div>
-            <div>
-                <label for="password">密　码：</label>
-                <input id="password" name="password" type="password" class="u-txt"><br/>
-                <span class="tip">至少6位，同时包含数字和字母</span>
-            </div>
-            <div><button name="loginBtn">登  录</button></div>
-        </fieldset>
-    </form>
-    <iframe name="result" id="result" style="display:none;"></iframe>
+	<form action="./login" class="m-form" name="loginForm" target="result" autocomplete="off">
+	  <legend>手机号码登录</legend>
+	  <fieldset>
+	    <div class="msg" id="message"></div>
+		<div>
+		  <label for="telephone">手机号：</label>
+		  <input id="telephone" name="telephone" type="tel" class="u-txt" maxlength="11" 
+		         required pattern="^0?(13[0-9]|15[012356789]|18[0236789]|14[57])[0-9]{8}$"><br/>
+		  <span class="tip">11位数字手机号码</span>
+		</div>
+		<div>
+		  <label for="password">密　码：</label>
+		  <input id="password" name="password" type="password" class="u-txt"><br/>
+		  <span class="tip">至少6位，同时包含数字和字母</span>
+		</div>
+		<div><button name="loginBtn">登　录</button></div>
+	  </fieldset>
+	</form>
+	<iframe name="result" id="result" style="display:none;"></iframe>
     <script src="login.js"></script>   
 </body>
 </html>
