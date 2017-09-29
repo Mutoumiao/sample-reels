@@ -27,6 +27,10 @@
 - 开发方式: 简单实现\HTML5 API学习
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/image-preview/image.html)
 
+### 图片上传预览 | 文件地址:[login](./JavaScript/login/)
+- 开发方式: iframe实现表单的无刷新提交
+- [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/login/login.html)
+
 ## 小Demo(主要针对某种功能使用练习)
 
 ### data-属性使用 | 文件地址:[data](./min-demo/data.html)
