@@ -20,7 +20,7 @@
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/collpase/collpase.html)
 
 ### 仿天谕轮播图 | 文件地址:[TY-slides](./JavaScript/TY-slides/)
-- 开发方式: 原生实现
+- 开发方式: 原生实现(学习专用)
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/TY-slides/index.html)
 
 ### 图片上传预览 | 文件地址:[image-preview](./JavaScript/image-preview/)
@@ -30,6 +30,10 @@
 ### 图片上传预览 | 文件地址:[login](./JavaScript/login/)
 - 开发方式: iframe实现表单的无刷新提交
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/login/login.html)
+
+### 级联选择器 | 文件地址:[select](./JavaScript/select/)
+- 开发方式: 思路学习简单实现\ES6语法
+- [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/select/select.html)
 
 ## 小Demo(主要针对某种功能使用练习)
 
