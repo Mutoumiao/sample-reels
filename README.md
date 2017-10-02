@@ -42,3 +42,9 @@
 - [演示Demo](https://mutoumiao.github.io/sample-reels/min-demo/data.html)
 ### 可支持任意级选择器级联的控件 | 文件地址:[selectList](./min-demo/selectList.js)
 - 开发方式 : 代码封装
+### 检测是否移动端 | 文件地址:[Detection-mobile](./min-demo/Detection-mobile.js)
+- 开发方式 : 代码封装|利用`navigator.userAgent`
+### 判断出是哪种浏览器 | 文件地址:[Detection-mobile](./min-demo/Detection-browser.js)
+- 开发方式 : 代码封装|利用`navigator.userAgent`
+### 判断IE的版本 | 文件地址:[Detection-IE](./min-demo/Detection-IE.js)
+- 开发方式 : 简单实现判断
