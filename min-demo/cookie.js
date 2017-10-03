@@ -19,6 +19,9 @@ function getcookie () {
 } 
 
 //cookie设置/修改
+//简单方法
+document.cookie = 'name=value';
+//封装
 function setCookie (name, value, expires, path, domain, secure) {
     var cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value);
     if (expires) cookie += '; expires=' + expires.toGMTString();
@@ -28,3 +31,7 @@ function setCookie (name, value, expires, path, domain, secure) {
     document.cookie = cookie;
 }
 
+//cookie删除
+function removeCookie (name, path, domain) {
+    document.cookie = name + '=' + '; path=' + path+ '; domain=' + domain + '; max-age=0';
+}
