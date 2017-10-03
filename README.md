@@ -48,3 +48,6 @@
 - 开发方式 : 代码封装|利用`navigator.userAgent`
 ### 判断IE的版本 | 文件地址:[Detection-IE](./min-demo/Detection-IE.js)
 - 开发方式 : 简单实现判断
+### Cookie转换\设置修改\删除-封装 | 文件地址:[Cookie](./min-demo/Cookie.js)
+- 开发方式 : 功能封装
+
