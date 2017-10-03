@@ -35,6 +35,7 @@
 - 开发方式: 思路学习简单实现\ES6语法
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/select/select.html)
 
+---------------------------------------------------------
 ## 小Demo(主要针对某种功能使用练习)
 
 ### data-属性使用 | 文件地址:[data](./min-demo/data.html)
@@ -51,3 +52,8 @@
 ### Cookie转换\设置修改\删除-封装 | 文件地址:[Cookie](./min-demo/cookie.js)
 - 开发方式 : 功能封装
 
+----------------------------------------------------------
+## CSS-布局
+
+### 居中解决方案
+- 水平居中 | 文件地址:[CenterHorizontally](./CssLayout/CenteredLayout/CenterHorizontally.md)
