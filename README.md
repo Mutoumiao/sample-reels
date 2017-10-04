@@ -57,3 +57,6 @@
 
 ### 居中解决方案
 - 居中 | 文件地址:[CenterHorizontally](./CssLayout/CenteredLayout/)
+
+### 多列布局方案
+- 多列布局 | 文件地址:[multi-columnLayout](./CssLayout/multi-columnLayout/)
