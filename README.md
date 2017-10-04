@@ -56,4 +56,4 @@
 ## CSS-布局
 
 ### 居中解决方案
-- 水平居中 | 文件地址:[CenterHorizontally](./CssLayout/CenteredLayout/CenterHorizontally.md)
+- 居中 | 文件地址:[CenterHorizontally](./CssLayout/CenteredLayout/)
