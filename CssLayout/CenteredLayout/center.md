@@ -7,7 +7,7 @@
 ```html
 <div class="parent">
     <div class="child">DEMO</div>
-<div>    
+</div>    
 ```
 #### 实现思路(1):
 - inline-block(行内块元素) + text-align(水平对齐方式) + table-cell(单元格元素) + vertical-align(垂直对齐) 
