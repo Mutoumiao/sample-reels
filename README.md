@@ -36,6 +36,9 @@
 - 开发方式: 思路学习简单实现\ES6语法
 - [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/select/select.html)
 
+### 图片列表预览 | 文件 地址:[ottergram](./JavaScript/ottergram/)
+- [演示Demo](https://mutoumiao.github.io/sample-reels/JavaScript/ottergram/index.html)
+
 ---------------------------------------------------------
 ## 小Demo(主要针对某种功能使用练习)
 
