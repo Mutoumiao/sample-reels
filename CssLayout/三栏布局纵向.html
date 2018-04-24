@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>三栏布局纵向</title>
+    <style>
+        html * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body, div.layout {
+            height: 100%;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    
+    <!-- 实现要求: 上下高度固定,中间自适应 -->
+    
+
+    <!-- =================================================================== -->
+
+
+    <!-- 实现（1）box-sizing - overflow
+    现实说明: 因需求是需要中间位自适应,因此高度为100%,但是这样就会导致多出200px,因此可以通过margin属性添加200px,然后通过设置border属性补回来,
+    再通过设置关键属性box-siziong属性,将border补回来的高度计算进去高度100%中,使用border属性主要为背景功能兼容,因为使用padding会显示背景,虽然
+    可以通过css3的背景显示功能设置,但是该属性只兼容IE9以上浏览器-->
+    <!-- 优点: 兼容性还好,兼容IE8以上-->
+    <!-- 缺点: 整体布局代码量多与混乱,无法兼容IE6-7,因高度耦合性高,因此无法做到上下不定高需求 -->
+    <!-- 滚动差别,如果在中间适应溢出(不加溢出属性布局会崩溃),会在中间滚动条(上下固定) -->
+    <!-- <div class="layout BoxSizing">
+        <style>
+            .layout.BoxSizing header {
+                position: relative;
+                height: 100px;
+                background: red;
+            }
+            .layout.BoxSizing section {
+                overflow: auto;
+                height: 100%;
+                margin: -100px 0;
+                border-top: 100px solid transparent;
+                border-bottom: 100px solid transparent;
+                background: yellow;
+                /* 重点代码 */
+                box-sizing: border-box;
+            }
+            .layout.BoxSizing footer {
+                height: 100px;
+                background: blue;
+            }
+        </style>
+        <header><p>header</p></header>
+        <section><h1>section</h1></section>
+        <footer></footer>
+    </div> -->
+
+    <!-- =================================================================== -->
+
+    <!-- 实现(2)-absolut  -->
+    <!-- 实现说明: 通过绝对定位的方式定点在指定的位置,并通过设置right,left属性来撑开宽度,因此达到实现要求 -->
+    <!-- 优点: 布局清晰,代码清晰可读,兼容性好 -->
+    <!-- 缺点: 整个布局脱离文档流,限制性过高,无法做到不定高实现 -->
+    <!-- 滚动差别,如果在中间适应溢出(不加溢出属性布局会崩溃),会在中间滚动条(上下固定) -->
+    <!-- <div class="layout position">
+        <style>
+            .layout.position header,
+            .layout.position section,
+            .layout.position footer {
+                position: absolute;
+            }
+            .layout.position header {
+                top: 0;
+                right: 0;
+                left: 0;
+                height: 100px;
+                background: red;
+            }
+            .layout.position section {
+                top: 100px;
+                right: 0;
+                left: 0;
+                bottom: 100px;
+                overflow: auto;
+                background: yellow;
+            }
+            .layout.position footer {
+                bottom: 0;
+                right: 0;
+                left: 0;
+                height: 100px;
+                background: blue;
+            }
+        
+        </style>
+        <header><h1>top</h1></header>
+        <section><h1>center</h1>
+        </section>
+        <footer><h1>bottom</h1></footer>
+    </div> -->
+
+<!-- =================================================================== -->
+   
+<!-- 实现(3)- table -->
+<!-- 实现说明: 通过在父容器设置为table表格元素,再通过将每个容器设置为表格行,通过设置宽高度100%,利用表格自动填充特性完成-->
+<!-- 优点: 可以兼容ie8以上,代码量较少 -->
+<!-- 缺点: 该写法无法兼容IE6-7-->
+<!-- 滚动区别: 在内容超出后,内容会自动被撑开,当内容超出窗口后会出现滚动条,而滚动会将整个页面都进行滚动(上下栏不固定) -->
+    <!-- <div class="layout table">
+        <style>
+            .layout.table {
+                display: table;
+                width: 100%;
+                height: 100%;
+            }
+            .layout.table header,
+            .layout.table section,
+            .layout.table footer {
+                display: table-row;
+            }
+            .layout.table header {
+                height: 100px;
+                background: red;
+            }
+            .layout.table section {
+                background: yellow;
+            }
+            .layout.table footer {
+                height: 100px;
+                background: blue;
+            }
+        
+        </style>
+        <header><h1>top</h1></header>
+        <section><h1>center</h1></section>
+        <footer><h1>bottom</h1></footer>
+    </div> -->
+
+<!-- =================================================================== -->
+    <!-- 实现(4)-flex(弹性盒子) -->
+    <!-- 实现说明: 只需要在父容器中定义为弹性盒子,并将上下等定高元素设置高度,并将中容器设置flex:1,填充剩余高度,关键属性,要设置弹性盒子为纵向排序
+    flex-direction:column -->
+    <!-- 优点: 灵活简单,代码量最少,并能够在不设置高度时实现内容高度需求 -->
+    <!-- 缺点: 主要缺点兼容性问题,次要性能一般 -->
+    <!-- 滚动区别: 在内容超出后,内容会自动被撑开,当内容超出窗口后会出现滚动条,而滚动会将整个页面都进行滚动(上下栏不固定) -->
+
+    <!-- <div class="layout flex">
+        <style>
+            .layout.flex {
+                display: flex;
+                flex-direction: column;
+            }
+            .layout.flex header {
+                height: 100px;
+                background: red;
+            }
+            .layout.flex section {
+                flex: 1;
+                background: yellow;
+            }
+            .layout.flex footer {
+                height: 100px;
+                background: blue;
+            }
+        </style>
+        <header><h1>top</h1></header>
+        <section><h1>center</h1></section>
+        <footer><h1>bottom</h1></footer>
+    </div> -->
+
+<!-- =================================================================== -->
+    
+    <!-- 实现(5)-grid(CSS网格) -->
+    <!-- 实现说明:只需要创建三列按照高度指定的列数即可,中间容器使用auto或者1fr(相当flex:1)设置填充剩余高度 -->
+    <!-- 优点: 灵活简单,代码量少,性能较好 -->
+    <!-- 缺点: 兼容性问题,需要设置宽高度 -->
+    <!-- 滚动区别: 在内容超出后,内容会自动被撑开,当内容超出窗口后会出现滚动条,而滚动会将整个页面都进行滚动(上下栏不固定) -->
+    <div class="layout grid">
+        <style>
+            .layout.grid {
+                display: grid;
+                grid-template-areas: "head" "main" "foot";
+                grid-template-rows: 100px 1fr 100px;
+            }
+            .layout.grid header {
+                grid-area: head;
+                background: red;
+            }
+            .layout.grid section {
+                grid-area: main;
+                background: yellow;
+            }
+            .layout.grid footer {
+                grid-area: foot;
+                background: blue;
+            }
+
+        </style>
+        <header><h1>top</h1></header>
+        <section><h1>center</h1></section>
+        <footer><h1>bottom</h1></footer>
+    </div>   
+</body>
+</html>
