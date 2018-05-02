@@ -195,3 +195,60 @@ body {
     background-color: #cccccc;
 }
 ```
+-----------------------------------------
+![九宫格](http://wx3.sinaimg.cn/mw690/0060lm7Tly1fqxdtkpu9nj308q08jmwy.jpg)
+### 九宫格
+> 实现之前使用 reset 清除浏览器默认样式
+-----------------------------------------
+#### 实现思路(1):
+- flex + box-sizing + :nth-child(CSS3选择器) 
+
+```html
+  <ul class="grid">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+  </ul>
+```
+```css
+.grid {
+    display: flex;
+    flex-wrap: wrap; /* 核心代码 */                         
+    width: 300px;
+    /* ------为了偏移展示(可选)-------- */
+    position: relative;
+    left: 200px;
+    top: 100px;
+    /* ------------------------- */
+}
+.grid li {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    border: 4px solid black;
+    /* --------核心代码---------- */
+    box-sizing: border-box;
+    margin-left: -4px;
+    margin-top: -4px; 
+    /* ------------------------ */
+}
+   /* --------核心代码---------- */
+.grid li:nth-child(-n+3) {
+    margin-top: 0;
+}
+.grid li:nth-child(3n+1) {
+    margin-left: 0;
+}
+ /* ------------------------ */
+.grid li:hover {
+    border-color: red;
+    z-index: 2;
+}
+```
