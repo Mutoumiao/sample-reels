@@ -138,3 +138,60 @@ html, body {
     background-color: #ccc;
 }
 ```
+-----------------------------------------
+#### 实现思路(2):
+- Grid 网格布局方法
+
+```html
+<div class="parent">
+    <div class="header">header</div>
+    <div class="center">center</div>
+    <div class="left">left</div>
+    <die class="right">right</die>
+    <div class="footer">footer</div>
+</div>
+```
+```css
+html,
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+.parent {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 100px 1fr 200px;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas: 
+        "header header header" 
+        "leftside main rightside"
+        "footer footer footer";
+}
+.header {
+    grid-area: header;
+    background-color: #cccccc;
+}
+.left {
+    grid-area: leftside;
+    background-color: red;
+}
+.center {
+    grid-area: main;
+    background-color: yellow;
+    margin: 0 15px;
+    /* 边距 */
+}
+.right {
+    grid-area: rightside;
+    background-color: blue;
+}
+.footer {
+    grid-area: footer;
+    background-color: #cccccc;
+}
+```
