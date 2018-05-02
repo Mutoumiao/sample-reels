@@ -47,7 +47,7 @@
 .child {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /*如果定宽的话,可以使用mrgin-left : -<自身宽度一半>px*/
 }
 ```
 #### 解决方案说明
@@ -55,6 +55,24 @@
 > - 特点: 因使用绝对定位原因,因此子容器为内容宽度,因此再配合变换属性完成
 > - 优点: 因`absolute`(绝对定位)属性脱离文档流,因此不影响其他子容器
 > - 缺点: 因`transform`(变换)属性是CSS3定义的属性,因此需要在高版本浏览器中进行使用,因此缺点是兼容性低
+
+#### 实现思路(3):
+- relative(相对定位) + absolute(绝对定位)
+```css
+.parent {
+    position: relative;
+}
+.child {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+```
+#### 解决方案说明
+> - 说明: 当`left`、`right`为0时,`margin-left`&`right`设置`auto`的话会无限延伸占满空间并且平分
+> - 优点: 因`absolute`(绝对定位)属性脱离文档流,因此不影响其他子容器,简单,兼容性较好(ie8+)
+> - 缺点: 脱离文档流
 --------------------------------------
 #### 实现思路(4):
 - flex(弹性盒子) + justify-content(设置弹性盒子对齐方式)
