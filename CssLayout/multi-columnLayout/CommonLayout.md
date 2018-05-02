@@ -99,20 +99,20 @@ html, body {
     background-color: #ccc;
 }
 .parent {
-    box-sizing: border-box;
     height: 100%;
-    padding: 0 215px 0 115px;  
     margin: -80px 0 -60px 0;
+    padding: 0 215px 0 115px;  
     border-top: 80px solid transparent;
     border-bottom: 60px solid transparent;
+    box-sizing: border-box;
 }
 .left {
-    margin-left: -100%;  
-    position: relative;
-    left: -115px;  
     float: left;
+    position: relative;
     width: 100px;
     height: 100%;
+    left: -115px;  
+    margin-left: -100%;  
     background-color: red;
 }
 .center {
@@ -124,12 +124,12 @@ html, body {
 
 }
 .right {
+    float: left;
     position: relative;
-    left: 215px; 
     width: 200px;
     height: 100%;
     margin-left: -200px; 
-    float: left;
+    left: 215px; 
     background-color: blue;
 
 }
