@@ -201,7 +201,7 @@ body {
 > 实现之前使用 reset 清除浏览器默认样式
 -----------------------------------------
 #### 实现思路(1):
-- flex + box-sizing + :nth-child(CSS3选择器) 
+- flex + box-sizing + :nth-child(CSS3选择器) + margin
 
 ```html
   <ul class="grid">
@@ -252,4 +252,50 @@ body {
     z-index: 2;
 }
 ```
+-----------------------------------------
 
+#### 实现思路(2):
+- grid + :nth-child(CSS3选择器) + margin
+
+```html
+  <ul class="grid">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+  </ul>
+```
+```css
+.grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    /* ------为了偏移展示(可选)-------- */
+    position: relative;
+    left: 200px;
+    top: 100px;
+    /* ------------------------- */
+}
+.grid li{
+    line-height: 100px;
+    text-align: center;
+    border: 4px solid black;
+    margin: -4px 0 0 -4px;
+}
+.grid li:nth-child(-n+3) {
+    margin-top: 0;
+}
+.grid li:nth-child(3n+1) {
+    margin-left: 0;
+}
+.grid li:hover {
+    border-color: red;
+    z-index: 2;
+} 
+```
+> Grid布局自身自带box-sizing效果,因此无需增加该属性
